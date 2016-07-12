@@ -20,3 +20,10 @@ npm install
 jspm install
 npm start
 ```
+
+
+- TODO
+components using systemsjs
+css lazy loading
+routing using ui-router
+build for production
