@@ -25,7 +25,6 @@
                 return;
             }
             logger.info('Email to send password : '+ this.credentials.email);
-            this.$router.navigate(['Login']);
         };
     }
     
@@ -36,8 +35,7 @@
     angular.module('app').component('forgottenPassword', {
         templateUrl: 'app/common/login/forgotten.password.html',
         controller: ForgottenPasswordComponent,
-        controllerAs: 'fpd',
-        bindings: { $router: '<' }
+        controllerAs: 'fpd'
     });
     
 })(window.angular);

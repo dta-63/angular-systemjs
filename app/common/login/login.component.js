@@ -25,9 +25,7 @@
                 return;
             }
             logger.info('Login : '+ this.credentials.login);
-            logger.info('Redirect to dashboard');
-            _this.$router.navigate(['Dashboard']);
-        };
+            logger.info('Redirect to dashboard');        };
 
     }
 
@@ -38,8 +36,7 @@
     angular.module('app').component('login', {
         templateUrl: 'app/common/login/login.html',
         controller: LoginComponent,
-        controllerAs: 'Login',
-        bindings: { $router: '<' }
+        controllerAs: 'Login'
     });
 
 })(window.angular);

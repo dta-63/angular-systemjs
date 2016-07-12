@@ -1,7 +1,7 @@
 {
-  "name": "angular-babel",
+  "name": "angular-systemjs",
   "version": "1.0.0",
-  "description": "Angular project based on version 1.5 with babel",
+  "description": "Angular project based on version 1.5 with systemjs",
   "main": "system.config.js",
   "devDependencies": {
     "babel-core": "^6.10.4",

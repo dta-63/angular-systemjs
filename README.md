@@ -1,4 +1,4 @@
-# Angular-babel
+# Angular-systemjs
 
 Angular project based on version 1.5.7. This is an example with login page and dashboard using Material Design and systemjs.
 This architecture work with :

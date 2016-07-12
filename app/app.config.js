@@ -38,17 +38,4 @@ function AppConfig(locationProvider, translateProvider) {
 AppConfig.$inject = ['$locationProvider', '$translateProvider'];
 
 
-// module configuration
-let angular.module('app', imports).config(AppConfig);
-
-
-// Bootstrap the webpage when DOM is ready
-angular.element(document).ready(function() {
-  angular.bootstrap(document, ['app'], {
-    strictDi: true
-  });
-});
-
-
-
-export default app;
+export default angular.module('app', imports).config(AppConfig);
