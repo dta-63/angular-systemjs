@@ -1,0 +1,9 @@
+.login {
+    width: 500px;
+    max-width: 90%;
+}
+
+.login form {
+    padding: 20px;
+    height: 300px;
+}

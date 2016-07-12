@@ -1,0 +1,28 @@
+<div layout="column" layout-align="center center" layout-fill>
+    <div layout="column" class="login md-whiteframe-z1 layout-column">
+        <md-toolbar>
+            <h2 class="md-toolbar-tools"><span>{{"login" |translate}}</span></h2>
+        </md-toolbar>
+        <form name="loginForm" layout="column" ng-submit="Login.login(loginForm)" novalidate>
+            <md-input-container>
+                <label>{{"login.email" |translate}}</label>
+                <input type="email" ng-model="Login.credentials.login" required name="email">
+                <div ng-messages="loginForm.email.$error"  ng-if='loginForm.email.$dirty'>
+                    <div ng-message="required">{{"input.required" | translate}}</div>
+                    <div ng-message="email">{{"input.email" | translate}}</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>{{"login.password" |translate}}</label>
+                <input type="password" ng-model="Login.credentials.password" required  name="password" autofocus="true" >
+                <div ng-messages="loginForm.password.$error" ng-if='loginForm.password.$dirty'>
+                    <div ng-message="required">{{"input.required" | translate}}</div>
+                </div>
+            </md-input-container>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised" type="submit" ng-class="{'md-primary' : loginForm.$valid && !Login.isRunning}">{{"login.connection" |translate}}</md-button>
+                <md-button  ng-link="['ForgottenPassword']">{{"login.forgotten" |translate}}</md-button>
+            </div>
+        </form>
+    </div>
+</div>
