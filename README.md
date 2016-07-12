@@ -13,10 +13,10 @@ This architecture work with :
 
 - Launch the following command lines for a minimal configuration :
 ```
-npm install -g bower 
+npm install -g jspm 
 npm install -g grunt
 npm install -g grunt-cli
 npm install
-bower install
+jspm install
 npm start
 ```

@@ -1,3 +1,3 @@
-/nbproject/
-/bower_components
+/nbproject
+/jspm_packages
 /node_modules

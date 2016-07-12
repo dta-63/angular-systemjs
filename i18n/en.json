@@ -1,0 +1,17 @@
+{
+   "login": "Login",
+   "login.email": "Email",
+   "login.password": "Password",
+   "login.connection": "Login",
+   "login.forgotten": "Forgot password",
+
+   "fpd": "Reinit your password",
+   "fpd.email": "Email",
+   "fpd.reinit": "Reinit",
+   "fpd.backToLogin": "Back to login",
+   
+   "input.required": "Required field",
+   "input.email": "Invalid email",
+   
+   "dashboard": "dashboard"
+}

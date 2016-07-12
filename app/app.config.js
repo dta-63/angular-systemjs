@@ -1,20 +1,17 @@
 // Import dependencies
 import angular from 'angular';
-
-/**
- * Application Settings
- * @type {object}
- * @property {string} name - The project name.
- * @property {boolean} debug - Value indicating whether application is running in debug mode.
- */
-var configuration = {
-    name: 'angular-components',
-    debug: true
-};
+import 'angular-ui-router';
+import 'angular-cookies';
+import 'angular-resource';
+import 'angular-messages';
+import 'angular-material';
+import 'angular-sanitize';
+import 'angular-translate';
+import 'angular-translate-loader-static-files';
 
 
 // Declare main module with dependencies
-var imports = ['ngCookies', 'ngSanitize', 'ngComponentRouter', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
+let imports = ['ui.router','ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
 
 /**
  * Represents the application configuration block.
@@ -42,9 +39,7 @@ AppConfig.$inject = ['$locationProvider', '$translateProvider'];
 
 
 // module configuration
-angular.module('app', imports)
-        .config(AppConfig)
-        .value('$routerRootComponent', 'root');
+let angular.module('app', imports).config(AppConfig);
 
 
 // Bootstrap the webpage when DOM is ready
@@ -54,4 +49,6 @@ angular.element(document).ready(function() {
   });
 });
 
-//https://github.com/crabcanon/angular-es6-demo
+
+
+export default app;
