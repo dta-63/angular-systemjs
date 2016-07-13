@@ -1,3 +1,5 @@
+'use strict';
+
 // Import dependencies
 import angular from 'angular';
 import 'angular-ui-router';
@@ -38,4 +40,6 @@ function AppConfig(locationProvider, translateProvider) {
 AppConfig.$inject = ['$locationProvider', '$translateProvider'];
 
 
-export default angular.module('app', imports).config(AppConfig);
+export default angular.module('app', imports)
+                    .config(AppConfig)
+                    .value('debug', true);
