@@ -45,7 +45,9 @@
       "angular-translate": "github:angular-translate/bower-angular-translate@^2.11.0",
       "angular-translate-loader-static-files": "github:angular-translate/bower-angular-translate-loader-static-files@^2.11.0",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
-      "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@^1.0.9"
+      "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@^1.0.9",
+      "systemjs/plugin-text": "github:systemjs/plugin-text@^0.0.8",
+      "text": "github:systemjs/plugin-text@^0.0.8"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
