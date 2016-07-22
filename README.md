@@ -3,27 +3,26 @@
 Angular project based on version 1.5.7. This is an example with login page and dashboard using Material Design and systemjs.
 This architecture work with :
 - Angular components
-- Ecmascript 6 with babel
-- Lazyloading with systemjs
+- Ecmascript 6 syntax with Babel
+- Ecmascript 6 modules with SystemJS
+- Lazyloading with ocLazyload and angular states
 - Material Design
+- Bundle builds via SystemJS Builder
 
 **Requirements:**
 - Install [NodeJS](https://nodejs.org/en/download/ "NodeJS") 
 - Install [Git](https://git-scm.com/downloads "Git") 
 
-- Launch the following command lines for a minimal configuration :
+- Install & Run :
 ```
 npm install -g jspm 
-npm install -g grunt
-npm install -g grunt-cli
 npm install
 jspm install
 npm start
 ```
+Browse to http://localhost:8000
 
-
-- TODO
-components using systemsjs
-css lazy loading
-routing using ui-router
-build for production
+**TODO:**
+- css lazy loading
+- routing using ui-router
+- build for production (grunt or gulp)

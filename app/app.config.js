@@ -25,7 +25,10 @@ let imports = ['ui.router', 'ngCookies', 'ngSanitize', 'pascalprecht.translate',
  */
 function AppConfig(locationProvider, translateProvider, stateProvider, urlRouterProvider) {
     // HTML 5 (remove # from url)
-    locationProvider.html5Mode(true);
+    locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
 
     // Translate plugin
     translateProvider.useSanitizeValueStrategy('sanitizeParameters');
