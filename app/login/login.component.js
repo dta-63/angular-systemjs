@@ -1,11 +1,8 @@
-import 'app/common/services/logger.service';
-
 /**
  * Represents the login component.
  */
-class LoginComponent() {
+class Login {
 
-    /*@ngInject*/
     constructor(logger){
         this.credentials = {};
     }
@@ -24,11 +21,6 @@ class LoginComponent() {
 
 }
 
+Login.$inject = ['logger'];
 
-// define angular component
-angular.module('app').component('login', {
-    templateUrl: 'app/common/login/login.html',
-    controller: LoginComponent,
-    controllerAs: 'Login'
-});
-
+export default Login;

@@ -44,7 +44,8 @@
       "angular-sanitize": "github:angular/bower-angular-sanitize@^1.5.7",
       "angular-translate": "github:angular-translate/bower-angular-translate@^2.11.0",
       "angular-translate-loader-static-files": "github:angular-translate/bower-angular-translate-loader-static-files@^2.11.0",
-      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15"
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
+      "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@^1.0.9"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -54,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/david-talabard/angular-babel"
+    "url": "https://github.com/david-talabard/angular-systemjs"
   },
   "keywords": [
     "angular",
@@ -66,7 +67,6 @@
   "author": "David Talabard",
   "license": "ISC",
   "scripts": {
-    "start": "http-server -a localhost -p 8000 -c-1",
-    "bundle": "node bundle.js"
+    "start": "http-server -a localhost -p 8000 -c-1"
   }
 }

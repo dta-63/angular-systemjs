@@ -1,8 +1,7 @@
-import app from 'app/app.config';
 /**
  * Represents the logger service.
  */
-class LoggerService(){     
+class LoggerService {     
 
     /*@ngInject*/
     constructor(debug){
@@ -13,7 +12,7 @@ class LoggerService(){
      * @param {string} message - The message.
      */
     info(message){
-        if (!configuration.debug){
+        if (!this.debug){
             return;
         }
         console.log(message);
@@ -25,7 +24,7 @@ class LoggerService(){
      * @param {object} reason - The error reason.
      */
     error(message, reason){
-        if (!configuration.debug){
+        if (!this.debug){
             return;
         }
         
@@ -37,5 +36,7 @@ class LoggerService(){
     };
 }    
 
-// define angular factory
-app.service('logger', LoggerService);
+LoggerService.$inject = ['debug'];
+
+export default LoggerService;
+

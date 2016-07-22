@@ -1,11 +1,8 @@
-import 'app/common/services/logger.service';
-
 /**
  * Represents the forgotten password component.
  */
-class ForgottenPasswordComponent() {
+class ForgottenPassword {
 
-    /*@ngInject*/
     constructor(logger){
         this.credentials = {};
     }
@@ -23,11 +20,8 @@ class ForgottenPasswordComponent() {
     };
 }
     
-    
-// define angular component
-angular.module('app').component('forgottenPassword', {
-    templateUrl: 'app/common/login/forgotten.password.html',
-    controller: ForgottenPasswordComponent,
-    controllerAs: 'fpd'
-});
+ForgottenPassword.$inject = ['logger'];
+
+export default ForgottenPassword;
+
     
