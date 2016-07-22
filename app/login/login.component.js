@@ -21,6 +21,6 @@ class Login {
 
 }
 
-Login.$inject = ['logger'];
+Login.$inject = ['LoggerService'];
 
 export default Login;

@@ -20,7 +20,7 @@ class ForgottenPassword {
     };
 }
     
-ForgottenPassword.$inject = ['logger'];
+ForgottenPassword.$inject = ['LoggerService'];
 
 export default ForgottenPassword;
 
