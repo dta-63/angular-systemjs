@@ -1,6 +1,7 @@
 [
 	{
 		"name": "login",
+		"default": true,
 		"url": "/login",
 		"template": "<login></login>",
 		"module": "app/login/login.module"

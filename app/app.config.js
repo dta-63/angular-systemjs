@@ -12,7 +12,7 @@ import 'angular-sanitize';
 import 'angular-translate';
 import 'angular-translate-loader-static-files';
 // Common dependencies
-import LoaderService from './common/services/loader.service';
+import LazyLoader from './common/services/loader.service';
 import states from './app.states.json!json';
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
@@ -50,22 +50,23 @@ function AppConfig(locationProvider,
 
     // Default languages
     translateProvider.preferredLanguage('en');
+
     // States configuration
     for(let i in states) {
-        stateProvider.state(states[i].name, {
-            url: states[i].url,
-            template: states[i].template,
-            resolve: {
-                 load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return System.import(states[i].module).then(function(m) {
-                         return $ocLazyLoad.load(m['default']);
-                    })
+        let state = states[i];
+        if(state.default){
+            urlRouterProvider.otherwise(state.url);
+        }
+        if(state.module) {
+            state.resolve =  {
+                load: ['LazyLoader', function (loader) {
+                    return loader.load(states[i].module);
                 }]
             }
-        })
+        }
+        stateProvider.state(state.name, state);
     }
    
-    urlRouterProvider.otherwise('/login');
 
     // Debug 
     logProvider.debugEnabled(debug);
@@ -85,4 +86,4 @@ AppConfig.$inject = ['$locationProvider',
 
 export default angular.module('app', imports)
                       .config(AppConfig)
-                      .service(LoaderService.name, LoaderService);
+                      .service(LazyLoader.name, LazyLoader);
