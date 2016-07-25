@@ -73,6 +73,17 @@ function AppConfig(locationProvider,
                     })
                 }]
             }
+        })
+        .state('dashboard', {
+            url: '/dashboard',
+            template: "<dashboard></dashboard>",
+            resolve: {
+                load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return System.import('app/dashboard/dashboard.module').then(function(m) {
+                         return $ocLazyLoad.load(m['default']);
+                    })
+                }]
+            }
         });
 
     urlRouterProvider.otherwise('/login');

@@ -7,10 +7,12 @@ class Login {
      * Component constructor.
      * @constructor
      * @param {object} $log - Angular logger service.
+     * @param {object} $state - Ui router state service to redirect user on the dashboard.
      */
-    constructor($log){
+    constructor($log, $state){
         this.credentials = {};
         this.$log = $log;
+        this.$state = $state;
     }
 
     /**
@@ -22,11 +24,11 @@ class Login {
             return;
         }
         this.$log.debug('Login : '+ this.credentials.login);
-        this.$log.debug('Redirect to dashboard');       
+        this.$state.go('dashboard');
     };
 
 }
 
-Login.$inject = ['$log'];
+Login.$inject = ['$log', '$state'];
 
 export default Login;
