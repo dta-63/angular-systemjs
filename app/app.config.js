@@ -13,6 +13,7 @@ import 'angular-translate';
 import 'angular-translate-loader-static-files';
 // Common dependencies
 import LoggerService from './common/services/logger.service';
+import LoaderService from './common/services/lazy-loader.service';
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
 // Active debug
@@ -24,13 +25,11 @@ let debug = true;
  * @param {object} translateProvider - The angular translate provider
  * @param {object} stateProvider - Ui router provider to configure different states
  * @param {object} urlRouterProvider - Provider use to specify default url
- * @param {object} ocLazyLoadProvider - Provider for lazy loading module
  */
 function AppConfig(locationProvider, 
                    translateProvider, 
                    stateProvider, 
-                   urlRouterProvider, 
-                   ocLazyLoadProvider) {
+                   urlRouterProvider) {
 
     // HTML 5 (remove # from url)
     locationProvider.html5Mode({
@@ -49,17 +48,14 @@ function AppConfig(locationProvider,
     translateProvider.preferredLanguage('en');
 
     // States configuration
-
-    //TODO MODULE LOADER
-    //https://oclazyload.readme.io/docs/systemjs
     stateProvider
         .state('login', {
             url: '/login',
             template: "<login></login>",
-            resolve: {
-                load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    System.import('app/login/login.module.js').then(function(m) {
-                         return $ocLazyLoad.load(m.coreStates);
+             resolve: {
+                 load: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return System.import('app/login/login.module').then(function(m) {
+                         return $ocLazyLoad.load(m['default']);
                     })
                 }]
             }
@@ -69,19 +65,14 @@ function AppConfig(locationProvider,
             template: "<forgotten-password></forgotten-password>",
             resolve: {
                 load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    System.import('app/forgotten-password/forgotten.password.module.js').then(function(m) {
-                         return $ocLazyLoad.load(m.coreStates);
+                    return System.import('app/forgotten-password/forgotten.password.module').then(function(m) {
+                         return $ocLazyLoad.load(m['default']);
                     })
                 }]
             }
         });
 
     urlRouterProvider.otherwise('/login');
-
-    // Active debug mode for the file lazy loading
-    ocLazyLoadProvider.config({
-        debug: debug
-    });
 }
 
 // define AppConfig injection parameters
@@ -91,4 +82,5 @@ AppConfig.$inject = ['$locationProvider', '$translateProvider','$stateProvider',
 export default angular.module('app', imports)
                       .config(AppConfig)
                       .value('debug', debug)
-                      .service(LoggerService.name, LoggerService);
+                      .service(LoggerService.name, LoggerService)                     
+                      .service(LoaderService.name, LoaderService);

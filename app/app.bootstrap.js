@@ -5,7 +5,6 @@
  */
 'use strict';
 
-
 import app from 'app/app.config';
 
 // Bootstrap the webpage when DOM is ready

@@ -3,7 +3,6 @@
  */
 class LoggerService {     
 
-    /*@ngInject*/
     constructor(debug){
         this.debug = debug;
     }   
