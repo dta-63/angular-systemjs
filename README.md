@@ -15,7 +15,6 @@ This architecture work with :
 
 - Install & Run :
 ```
-npm install -g jspm 
 npm install
 jspm install
 npm start
@@ -24,5 +23,4 @@ Browse to http://localhost:8000
 
 **TODO:**
 - css lazy loading
-- routing using ui-router
 - build for production (grunt or gulp)
