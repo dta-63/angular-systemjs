@@ -12,7 +12,6 @@ import 'angular-sanitize';
 import 'angular-translate';
 import 'angular-translate-loader-static-files';
 // Common dependencies
-import LoggerService from './common/services/logger.service';
 import LoaderService from './common/services/lazy-loader.service';
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
@@ -25,11 +24,15 @@ let debug = true;
  * @param {object} translateProvider - The angular translate provider
  * @param {object} stateProvider - Ui router provider to configure different states
  * @param {object} urlRouterProvider - Provider use to specify default url
+ * @param {object} logProvider - Provider to configure debug mode
+ * @param {object} ocLazyLoadProvider - Provider to configure debug mode for the module ocLazyLoad
  */
 function AppConfig(locationProvider, 
                    translateProvider, 
                    stateProvider, 
-                   urlRouterProvider) {
+                   urlRouterProvider,
+                   logProvider,
+                   ocLazyLoadProvider) {
 
     // HTML 5 (remove # from url)
     locationProvider.html5Mode({
@@ -73,14 +76,23 @@ function AppConfig(locationProvider,
         });
 
     urlRouterProvider.otherwise('/login');
+
+    // Debug 
+    logProvider.debugEnabled(debug);
+    ocLazyLoadProvider.config({
+        debug: debug
+    });
 }
 
 // define AppConfig injection parameters
-AppConfig.$inject = ['$locationProvider', '$translateProvider','$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider'];
+AppConfig.$inject = ['$locationProvider', 
+                     '$translateProvider',
+                     '$stateProvider', 
+                     '$urlRouterProvider', 
+                     '$logProvider',
+                     '$ocLazyLoadProvider'];
 
 
 export default angular.module('app', imports)
                       .config(AppConfig)
-                      .value('debug', debug)
-                      .service(LoggerService.name, LoggerService)                     
                       .service(LoaderService.name, LoaderService);

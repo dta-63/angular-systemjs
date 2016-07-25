@@ -3,10 +3,15 @@
  */
 class ForgottenPassword {
 
-    constructor(logger){
+    /**
+     * Component constructor.
+     * @constructor
+     * @param {object} $log - Angular logger service.
+     */
+    constructor($log){
         this.credentials = {};
+        this.$log = $log;
     }
-    
 
     /**
      * Request a new password.
@@ -16,11 +21,11 @@ class ForgottenPassword {
         if (!fpdForm.$valid){
             return;
         }
-        logger.info('Email to send password : '+ this.credentials.email);
+        this.$log.debug('Email to send password : '+ this.credentials.email);
     };
 }
     
-ForgottenPassword.$inject = ['LoggerService'];
+ForgottenPassword.$inject = ['$log'];
 
 export default ForgottenPassword;
 

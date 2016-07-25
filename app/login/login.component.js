@@ -3,8 +3,14 @@
  */
 class Login {
 
-    constructor(logger){
+    /**
+     * Component constructor.
+     * @constructor
+     * @param {object} $log - Angular logger service.
+     */
+    constructor($log){
         this.credentials = {};
+        this.$log = $log;
     }
 
     /**
@@ -15,12 +21,12 @@ class Login {
         if (!loginForm.$valid || this.isRunning) {
             return;
         }
-        logger.info('Login : '+ this.credentials.login);
-        logger.info('Redirect to dashboard');       
+        this.$log.debug('Login : '+ this.credentials.login);
+        this.$log.debug('Redirect to dashboard');       
     };
 
 }
 
-Login.$inject = ['LoggerService'];
+Login.$inject = ['$log'];
 
 export default Login;
