@@ -12,7 +12,8 @@ import 'angular-sanitize';
 import 'angular-translate';
 import 'angular-translate-loader-static-files';
 // Common dependencies
-import LoaderService from './common/services/lazy-loader.service';
+import LoaderService from './common/services/loader.service';
+import states from './app.states.json!json';
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
 // Active debug
@@ -49,43 +50,21 @@ function AppConfig(locationProvider,
 
     // Default languages
     translateProvider.preferredLanguage('en');
-
     // States configuration
-    stateProvider
-        .state('login', {
-            url: '/login',
-            template: "<login></login>",
-             resolve: {
+    for(let i in states) {
+        stateProvider.state(states[i].name, {
+            url: states[i].url,
+            template: states[i].template,
+            resolve: {
                  load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return System.import('app/login/login.module').then(function(m) {
+                    return System.import(states[i].module).then(function(m) {
                          return $ocLazyLoad.load(m['default']);
                     })
                 }]
             }
         })
-        .state('forgotten-password', {
-            url: '/login',
-            template: "<forgotten-password></forgotten-password>",
-            resolve: {
-                load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return System.import('app/forgotten-password/forgotten.password.module').then(function(m) {
-                         return $ocLazyLoad.load(m['default']);
-                    })
-                }]
-            }
-        })
-        .state('dashboard', {
-            url: '/dashboard',
-            template: "<dashboard></dashboard>",
-            resolve: {
-                load: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return System.import('app/dashboard/dashboard.module').then(function(m) {
-                         return $ocLazyLoad.load(m['default']);
-                    })
-                }]
-            }
-        });
-
+    }
+   
     urlRouterProvider.otherwise('/login');
 
     // Debug 
