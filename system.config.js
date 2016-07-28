@@ -31,6 +31,7 @@ System.config({
     "core-js": "npm:core-js@1.2.6",
     "json": "github:systemjs/plugin-json@0.1.2",
     "ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
+    "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.8",
     "text": "github:systemjs/plugin-text@0.0.8",
     "github:angular-translate/bower-angular-translate-loader-static-files@2.11.0": {

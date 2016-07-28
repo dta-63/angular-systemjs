@@ -1,6 +1,8 @@
 # Angular-systemjs
 
-Angular project based on version 1.5.7. This is an example with login page and dashboard using Material Design and systemjs.
+Angular project based on version 1.5.8 write in EcmaScript 6.
+This is an example with login page and dashboard using Material Design.
+
 This architecture work with :
 - Angular components
 - Ecmascript 6 syntax with Babel
@@ -13,7 +15,7 @@ This architecture work with :
 - Install [NodeJS](https://nodejs.org/en/download/ "NodeJS") 
 - Install [Git](https://git-scm.com/downloads "Git") 
 
-- Install & Run :
+**Install & Run:**
 ```
 npm install
 jspm install
