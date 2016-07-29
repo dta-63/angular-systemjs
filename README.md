@@ -27,3 +27,6 @@ Browse to http://localhost:8000
 ```
 grunt build
 ```
+
+**TODO:**
+- http-server reloading for dev
