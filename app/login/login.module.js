@@ -1,6 +1,6 @@
 import Login from './login.component';
 import LoginTemplate from './login.html!text';
-import './assets/css/login.css!css';
+import './assets/css/login.css!';
 
 export default angular.module('loginModule', [])
         .component('login', {

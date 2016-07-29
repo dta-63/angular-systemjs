@@ -13,7 +13,7 @@ import 'angular-translate';
 import 'angular-translate-loader-static-files';
 // Common dependencies
 import LazyLoader from './common/services/loader.service';
-import states from './app.states.json!json';
+import states from './app.states.json!';
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
 // Active debug

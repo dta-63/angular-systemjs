@@ -13,16 +13,25 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  meta: {
+    "*.css": {
+      "loader": "css"
+    },
+    "*.json": {
+      "loader": "json"
+    }
+  },
+
   map: {
-    "angular": "github:angular/bower-angular@1.5.7",
-    "angular-animate": "github:angular/bower-angular-animate@1.5.7",
-    "angular-aria": "github:angular/bower-angular-aria@1.5.7",
-    "angular-cookies": "github:angular/bower-angular-cookies@1.5.7",
+    "angular": "github:angular/bower-angular@1.5.8",
+    "angular-animate": "github:angular/bower-angular-animate@1.5.8",
+    "angular-aria": "github:angular/bower-angular-aria@1.5.8",
+    "angular-cookies": "github:angular/bower-angular-cookies@1.5.8",
     "angular-dynamic-locale": "github:lgalfaso/angular-dynamic-locale@0.1.32",
     "angular-material": "github:angular/bower-material@1.0.9",
-    "angular-messages": "github:angular/bower-angular-messages@1.5.7",
-    "angular-resource": "github:angular/bower-angular-resource@1.5.7",
-    "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.7",
+    "angular-messages": "github:angular/bower-angular-messages@1.5.8",
+    "angular-resource": "github:angular/bower-angular-resource@1.5.8",
+    "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.8",
     "angular-translate": "github:angular-translate/bower-angular-translate@2.11.0",
     "angular-translate-loader-static-files": "github:angular-translate/bower-angular-translate-loader-static-files@2.11.0",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
@@ -30,42 +39,41 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.25",
+    "text": "github:systemjs/plugin-text@0.0.8",
     "json": "github:systemjs/plugin-json@0.1.2",
     "ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
-    "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.8",
-    "text": "github:systemjs/plugin-text@0.0.8",
     "github:angular-translate/bower-angular-translate-loader-static-files@2.11.0": {
       "angular-translate": "github:angular-translate/bower-angular-translate@2.11.0"
     },
     "github:angular-translate/bower-angular-translate@2.11.0": {
-      "angular": "github:angular/bower-angular@1.5.7"
+      "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:angular-ui/ui-router@0.2.18": {
-      "angular": "github:angular/bower-angular@1.5.7"
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-animate@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-animate@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-aria@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-aria@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-cookies@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-cookies@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-messages@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-messages@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-resource@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-resource@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
-    "github:angular/bower-angular-sanitize@1.5.7": {
-      "angular": "github:angular/bower-angular@1.5.7"
+    "github:angular/bower-angular-sanitize@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
     "github:angular/bower-material@1.0.9": {
-      "angular": "github:angular/bower-angular@1.5.7",
-      "angular-animate": "github:angular/bower-angular-animate@1.5.7",
-      "angular-aria": "github:angular/bower-angular-aria@1.5.7",
+      "angular": "github:angular/bower-angular@1.5.8",
+      "angular-animate": "github:angular/bower-angular-animate@1.5.8",
+      "angular-aria": "github:angular/bower-angular-aria@1.5.8",
       "css": "github:systemjs/plugin-css@0.1.23"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -87,7 +95,7 @@ System.config({
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "github:lgalfaso/angular-dynamic-locale@0.1.32": {
-      "angular": "github:angular/bower-angular@1.5.7"
+      "angular": "github:angular/bower-angular@1.5.8"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
