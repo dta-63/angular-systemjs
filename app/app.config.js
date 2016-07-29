@@ -11,9 +11,12 @@ import 'angular-material';
 import 'angular-sanitize';
 import 'angular-translate';
 import 'angular-translate-loader-static-files';
+import 'jspm_packages/github/angular/bower-material@1.0.9/angular-material.css';
+
 // Common dependencies
 import LazyLoader from './common/services/loader.service';
 import states from './app.states.json!';
+
 // Declare  dependencies with module names
 let imports = ['ui.router', 'oc.lazyLoad', 'ngCookies', 'ngSanitize', 'pascalprecht.translate', 'ngResource', 'ngMaterial', 'ngMessages'];
 // Active debug

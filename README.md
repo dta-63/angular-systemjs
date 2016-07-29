@@ -23,5 +23,7 @@ npm start
 ```
 Browse to http://localhost:8000
 
-**TODO:**
-- build for production (grunt or gulp)
+**For production build:**
+```
+grunt build
+```
