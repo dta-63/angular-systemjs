@@ -7,7 +7,7 @@ This architecture work with :
 - Angular components
 - Ecmascript 6 syntax with Babel
 - Ecmascript 6 modules with SystemJS
-- Lazyloading with ocLazyload and angular states
+- Lazyloading with ocLazyload (JS, HTML, CSS)
 - Material Design
 - Bundle builds via SystemJS Builder
 
@@ -24,5 +24,4 @@ npm start
 Browse to http://localhost:8000
 
 **TODO:**
-- css lazy loading
 - build for production (grunt or gulp)

@@ -29,6 +29,7 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
+    "css": "github:systemjs/plugin-css@0.1.25",
     "json": "github:systemjs/plugin-json@0.1.2",
     "ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
