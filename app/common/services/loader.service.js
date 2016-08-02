@@ -7,15 +7,14 @@ class LazyLoader {
 
     constructor(ocLazyLoad){
         this.ocLazyLoad = ocLazyLoad;
-    }   
+    }
 
-	load(src, key) {
-		var loader = this.ocLazyLoad;
-
-  	 	return System.import(src).then(function (loadedFile) {
-      		return loader.load(loadedFile[key || 'default']);
-    	});
-	}
+    load(src, key) {
+        var loader = this.ocLazyLoad;
+        return System.import(src).then(function (loadedFile) {
+            return loader.load(loadedFile[key || 'default']);
+        });
+    }
 }
 
 LazyLoader.$inject = ['$ocLazyLoad'];

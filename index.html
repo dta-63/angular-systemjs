@@ -3,10 +3,11 @@
     <head lang="fr">
         <meta charset="utf-8">
         <title>Angular with systemjs</title>
-
+		<!-- build:js app.min.js?rel=timestamp -->
         <script src="jspm_packages/system.js"></script>
         <script src="system.config.js"></script>
         <script>System.import('app/app.bootstrap.js');</script>
+        <!-- /build -->
     </head>
     <body ui-view></body>
 </html>
