@@ -29,4 +29,5 @@ grunt build
 ```
 
 **TODO:**
+- fix build forproduction
 - http-server reloading for dev
