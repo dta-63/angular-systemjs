@@ -40,7 +40,7 @@ module.exports = function (grunt) {
                 sourceMaps: false,
                 baseURL: './',
                 configFile: './system.config.js',
-                minify: false,
+                minify: true,
                 build: {
                     mangle: false
                 }
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                         dot: true,
                         dest: './build',
                         src: [
-                            '*.{ico}',
+                            '*.ico',
                             'i18n/**'
                         ]
                     }]
