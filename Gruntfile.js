@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             });
             patterns.push({
                 match: states[i].module,
-                replacement: 'bundles/' + states[i].name + '.min?rel=' + buildNumber
+                replacement: 'bundles/' + states[i].name + '.min.js?rel=' + buildNumber
             });
         }
     }
@@ -40,9 +40,9 @@ module.exports = function (grunt) {
                 sourceMaps: false,
                 baseURL: './',
                 configFile: './system.config.js',
-                minify: true,
+                minify: false,
                 build: {
-                    mangle: true
+                    mangle: false
                 }
             },
             dist: {

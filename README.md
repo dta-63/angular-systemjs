@@ -30,4 +30,5 @@ grunt build
 
 **TODO:**
 - fix build forproduction
-- http-server reloading for dev
+- Tests e2e using protractor
+- TU using karma

@@ -63,8 +63,8 @@ function AppConfig(locationProvider,
         if(state.module) {
             state.resolve =  {
                 load: ['LazyLoader', function (loader) {
-                    return loader.load(states[i].module);
-                }]
+                    return loader.load(this.module);
+                }.bind(state)]
             }
         }
         stateProvider.state(state.name, state);
