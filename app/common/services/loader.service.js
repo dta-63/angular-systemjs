@@ -12,7 +12,7 @@ class LazyLoader {
     load(src, key) {
         var loader = this.ocLazyLoad;
         return System.import(src).then(function (loadedFile) {
-            return loader.load(src);
+            return loader.load(loadedFile['default']);
         });
     }
 }

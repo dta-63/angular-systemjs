@@ -60,6 +60,6 @@
   "author": "David Talabard",
   "license": "ISC",
   "scripts": {
-     "start": "superstatic --config ./server.json --port 8000"
+    "start": "superstatic --config ../server.json --port 8000"
   }
 }
