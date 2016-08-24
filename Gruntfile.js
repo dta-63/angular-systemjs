@@ -41,6 +41,7 @@ module.exports = function (grunt) {
                 baseURL: './',
                 configFile: './system.config.js',
                 minify: true,
+                separateCSS: true,
                 build: {
                     mangle: false
                 }
