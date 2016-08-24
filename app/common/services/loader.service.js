@@ -11,6 +11,9 @@ class LazyLoader {
 
     load(src, key) {
         var loader = this.ocLazyLoad;
+        if(src.indexOf('.min.js') > 0){
+            return loader.load(src);
+        }
         return System.import(src).then(function (loadedFile) {
             return loader.load(loadedFile['default']);
         });

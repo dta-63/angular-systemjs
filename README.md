@@ -19,7 +19,8 @@ This architecture work with :
 ```
 npm install
 jspm install
-npm start
+npm run dev
+npm run build
 ```
 Browse to http://localhost:8000
 

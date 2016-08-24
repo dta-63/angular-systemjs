@@ -60,6 +60,7 @@
   "author": "David Talabard",
   "license": "ISC",
   "scripts": {
-    "start": "superstatic --config ../server.json --port 8000"
+    "dev": "superstatic --config ../server.json --port 8000",
+    "build": "grunt build && cd ./build/ && superstatic --config ../server.json --port 8001"
   }
 }
