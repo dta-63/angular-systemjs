@@ -15,21 +15,26 @@ This architecture work with :
 - Install [NodeJS](https://nodejs.org/en/download/ "NodeJS") 
 - Install [Git](https://git-scm.com/downloads "Git") 
 
-**Install & Run:**
+**Install :**
 ```
 npm install
 jspm install
-npm run dev
-npm run build
 ```
-Browse to http://localhost:8000
+
+**Run :**
+```
+npm run dev
+```
 
 **For production build:**
 ```
 grunt build
 ```
+You can test production build (using bundles) with the following command :
+```
+npm run build
+```
 
 **TODO:**
-- fix build forproduction
 - Tests e2e using protractor
 - TU using karma
