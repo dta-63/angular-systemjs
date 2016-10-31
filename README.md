@@ -35,7 +35,26 @@ You can test production build (using bundles) with the following command :
 npm run build
 ```
 
-**TODO:**
-  * [ ] Tests e2e using protractor
-  * [ ] TU using karma
+**Tests E2E**
 
+- To have e2e tests, you should install Protractor with the following command :
+```
+npm install -g protractor
+npm install -g protractor-jasmine2-html-reporter
+webdriver-manager update
+```
+By default, drivers for Chrome and Firefox are installed but you can add other drivers...
+For more information, see links: [Protractor](http://www.protractortest.org/#/ "Protractor") 
+
+
+- The tests server can be launch with this command :
+
+```
+webdriver-manager start
+```
+
+- In other terminal, launch tests:
+
+```
+protractor tests/configuration.js --baseUrl="http://localhost:8000"
+```

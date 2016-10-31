@@ -39,10 +39,10 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.25",
-    "text": "github:systemjs/plugin-text@0.0.8",
     "json": "github:systemjs/plugin-json@0.1.2",
     "ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
+    "text": "github:systemjs/plugin-text@0.0.8",
     "github:angular-translate/bower-angular-translate-loader-static-files@2.11.0": {
       "angular-translate": "github:angular-translate/bower-angular-translate@2.11.0"
     },
