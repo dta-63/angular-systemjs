@@ -1,4 +1,4 @@
-# Angular-systemjs
+# Angular-systemjs [![Build Status](https://travis-ci.org/david-talabard/Presentations.svg?branch=master)](https://travis-ci.org/david-talabard/angular-systemjs)
 
 Angular project based on version 1.5.8 write in EcmaScript 6.
 This is an example with login page and dashboard using Material Design.
@@ -36,5 +36,6 @@ npm run build
 ```
 
 **TODO:**
-- Tests e2e using protractor
-- TU using karma
+  * [ ] Tests e2e using protractor
+  * [ ] TU using karma
+
