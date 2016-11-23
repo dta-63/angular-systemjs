@@ -20,7 +20,7 @@ class Login {
      * @param {object} loginForm - The login form with credentials.
      */
     login(loginForm) {
-        if (!loginForm.$valid || this.isRunning) {
+        if (!loginForm.$valid) {
             return;
         }
         this.$log.debug('Login : '+ this.credentials.login);

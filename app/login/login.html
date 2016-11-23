@@ -20,7 +20,7 @@
                 </div>
             </md-input-container>
             <div layout="row" layout-align="center center">
-                <md-button class="md-raised" type="submit" ng-class="{'md-primary' : loginForm.$valid && !Login.isRunning}">{{"login.connection" |translate}}</md-button>
+                <md-button class="md-raised" type="submit" ng-class="{'md-primary' : loginForm.$valid}">{{"login.connection" |translate}}</md-button>
                 <md-button ui-sref="forgotten-password">{{"login.forgotten" |translate}}</md-button>
             </div>
         </form>
